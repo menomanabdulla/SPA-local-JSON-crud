@@ -1,0 +1,102 @@
+
+.m-30{
+	margin: 30px;
+}
+.m-20{
+	margin: 20px;
+}
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.main-block .form-control:focus{
+	box-shadow: none;
+	outline: 0;
+}
+.post-create-block{
+	position: relative;
+	padding: 15px;
+	border: 1px solid #f0f0f0;
+	min-height: 250px;
+}
+.p-main{
+	display: flex;
+}
+
+.profile-block img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+}
+textarea,
+.profile-block{
+	flex-grow: 1;
+    min-width: 100px;
+}
+textarea.form-control,
+textarea.form-control:focus,
+textarea.form-control:active,
+textarea.form-control:hover{
+	box-shadow: none;
+	border: none;
+	outline: 0;
+	padding: 20px;
+	resize: none;
+}
+.post-create-option-block{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.color-option-block li{
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 15px;
+}
+.color-one{
+	background: #7cffcb;
+}
+.color-two{
+	background: #0cbaba;
+}
+.color-three{
+	background: #9e8fb2;
+}
+.color-four{
+	background: #fce043;
+}
+.color-five{
+	background: #045de9;
+}
+
+.post-create-additional-option-block{
+	display: flex;
+}
+.post-create-additional-option-block li{
+	flex-grow: 1;
+	min-width: 100px;
+	margin: 0 15px;
+}
+.post-create-additional-option-block li:last-child{
+	flex-grow: 3;
+	text-align: right;
+}
+.custom-btn{
+	height: 45px;
+	width: 150px;
+	border-radius: 15px;
+	background: #045de9;
+	color: #fff;
+}
+.btn:focus,
+.custom-btn:focus,
+.custom-btn:active{
+	outline: 0;
+	box-shadow: none;
+}

@@ -1,0 +1,40 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Name one",
+      "email": "One@mail.com",
+      "phone": 881
+    },
+    {
+      "id": 2,
+      "name": "Name two",
+      "email": "Two@mail.com",
+      "phone": 882
+    },
+    {
+      "id": 3,
+      "name": "Name three",
+      "email": "Three@mail.com",
+      "phone": 883
+    },
+    {
+      "name": "Name four updated",
+      "phone": "884 updated",
+      "email": "Four@mail.com updated",
+      "id": 4
+    },
+    {
+      "name": "Name five",
+      "phone": "885",
+      "email": "Five@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "Name Six",
+      "phone": "886",
+      "email": "Six@gmail.com",
+      "id": 6
+    }
+  ]
+}

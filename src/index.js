@@ -1,7 +1,7 @@
 
 let container =  document.createElement('div');
 container.className = 'container py-5';
-const URL = 'http://localhost:3000/contacts';
+const URL = 'http://localhost:3004/contacts';
 let top = `
     <h1 class="display-3 my-5">Ajax Crude</h1>
     <div class="row">
@@ -171,22 +171,27 @@ function editContact(contact){
         //container.innerHTML = model;
 
 
-        let name = document.querySelector('#nameEditInput');
-        let phone = document.querySelector('#phoneEditInput');
-        let email = document.querySelector('#emailEditInput');
-    
-        let newContact = {
-            name: name.value,
-            phone: phone.value,
-            email: email.value
-        }
-
+       
         editSubmitBtn.addEventListener('click',function(){
-            axios.put(`${URL}/${contact.id}`)
+
+            let name = document.querySelector('#nameEditInput');
+            let phone = document.querySelector('#phoneEditInput');
+            let email = document.querySelector('#emailEditInput');
+        
+            let newContact = {
+                name: name.value,
+                phone: phone.value,
+                email: email.value
+            }
+
+            
+            axios.put(`${URL}/${contact.id}`,newContact)
                 .then(res =>{
-                    res.forEach((a) => {
-                        console.log(a);
-                    })
+                    /*console.log(res)
+                    data.name = newContact.name
+                    data.phone = newContact.phone
+                   data.email = newContact.email
+                    console.log(res)*/
                 })
                 .catch(err=>console.log(err))
         })

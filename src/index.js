@@ -1,7 +1,9 @@
 
+let mainWrap = document.createElement('div');
+mainWrap.className = 'main-wrap';
 let container =  document.createElement('div');
 container.className = 'container py-5';
-const URL = 'http://localhost:3000/contacts';
+const URL = 'http://localhost:3004/contacts';
 let top = `
     <h1 class="display-3 my-5">Ajax Crude</h1>
     <div class="row">
@@ -47,8 +49,9 @@ window.onload = ()=>{
     saveData.addEventListener('click',createContact);
 }
 container.innerHTML = top;
-document.querySelector('#root').appendChild(container);
-
+//mainWrap.innerHTML= container;
+mainWrap.appendChild(container);
+document.querySelector('#root').appendChild(mainWrap);
 function creatTR(tbody,contact){
     let tr = document.createElement('tr');
 
@@ -166,7 +169,7 @@ function editContact(contact){
 
         mBodyInner.appendChild(rowDiv);
         mBody.appendChild(mBodyInner);
-        container.appendChild(mBody);
+        mainWrap.appendChild(mBody);
        // container.appendChild(model);
         //container.innerHTML = model;
         
@@ -180,13 +183,15 @@ function editContact(contact){
                 phone: phone.value,
                 email: email.value
             }
-           // console.log(newContact);
-            axios.put(`${URL}/${contact.id}`)
+
+            
+            axios.put(`${URL}/${contact.id}`,newContact)
                 .then(res =>{
-                 
+                  
                 })
                 .catch(err=>console.log(err))
+
+                location.reload();
         })
 
 }
-

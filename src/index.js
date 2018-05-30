@@ -169,26 +169,24 @@ function editContact(contact){
         container.appendChild(mBody);
        // container.appendChild(model);
         //container.innerHTML = model;
-
-
-        let name = document.querySelector('#nameEditInput');
-        let phone = document.querySelector('#phoneEditInput');
-        let email = document.querySelector('#emailEditInput');
-    
-        let newContact = {
-            name: name.value,
-            phone: phone.value,
-            email: email.value
-        }
-
+        
         editSubmitBtn.addEventListener('click',function(){
+            let name = document.querySelector('#nameEditInput');
+            let phone = document.querySelector('#phoneEditInput');
+            let email = document.querySelector('#emailEditInput');
+        
+            let newContact = {
+                name: name.value,
+                phone: phone.value,
+                email: email.value
+            }
+           // console.log(newContact);
             axios.put(`${URL}/${contact.id}`)
                 .then(res =>{
-                    res.forEach((a) => {
-                        console.log(a);
-                    })
+                 
                 })
                 .catch(err=>console.log(err))
         })
 
 }
+
